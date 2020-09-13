@@ -5,7 +5,7 @@ Tested on Linux with WSL2
 Requirements are opencv for C++ (Install it with your package manager).
 Compile `threshold.cc` with the following command
 ```
-g++ -O3 -std=c++11 threshold.cc `pkg-config --cflags --libs opencv4` -o ocr
+g++ -O3 -std=c++11 threshold.cc `pkg-config --cflags --libs opencv4` -o threshold
 ```
 
 Python requirements are easyocr, jellyfish, srt
