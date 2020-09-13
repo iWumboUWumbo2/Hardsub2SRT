@@ -10,6 +10,8 @@ g++ -O3 -std=c++11 threshold.cc `pkg-config --cflags --libs opencv4` -o threshol
 
 Python requirements are easyocr, jellyfish, srt
 
+Also ffmpeg must be installed
+
 I'll probably convert the bash script to python and also may convert threshold to python but I'm worried about the performance hit.
 Had to use easyOCR instead of tesseract cause tesseract was just not as accurate.
 
