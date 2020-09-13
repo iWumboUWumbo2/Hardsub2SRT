@@ -1,19 +1,19 @@
 #! /bin/bash
 
 ########################### constants ###########################
-input=xiaowangzi.mkv
-wcrop=2
+input=xiaowangzi.mkv # input video file
+wcrop=2 
 hcrop=5
-Stime=00:01:31
-Rtime=00:22:21
-fps=24
-lang=ch_sim
-accuracy=0.7
-shift='00:01:30.667'
+Stime=00:01:31 # how long is the op
+Rtime=00:22:21 # when does the ed start
+fps=1 # how many frames should ffmpeg capture per second
+lang=ch_sim # language code found here 'https://www.jaided.ai/easyocr'
+accuracy=0.7 # the code finds the jaro distance between two sentences to see how similar they are cause ocr messes up often. this value is how similar should the sentences be to be considered the same
+shift='00:01:30.667' # this is basically just to line up the subs. Its not working that well rn though
 
 ## NO SLASH AT THE END!!
-framedir=img_new
-thresholdir=wimg_new
+framedir=img_new # folder to hold the frame captures
+thresholdir=wimg_new # folder to hold the thresholded frames
 ##################################################################
 
 mkdir -p $framedir
