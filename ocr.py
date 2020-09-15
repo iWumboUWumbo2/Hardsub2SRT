@@ -59,7 +59,7 @@ if __name__ == "__main__":
     output_text = []
 
     for f in os.listdir(wimg_dir):
-        result = reader.readtext(wimg_dir+f, detail=0)
+        result = reader.readtext(os.path.join(wimg_dir,f), detail=0)
 
         frame = get_filename(f)
         text = ''.join(result)
