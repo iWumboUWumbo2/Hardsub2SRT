@@ -27,8 +27,10 @@ output_filename= args.output
 
 reader = easyocr.Reader([lang])
 
-def get_filename(fn):
-    return fn.split('.')[0].split('/')[-1]
+def get_filename(fn) -> str:
+    basename: str = os.path.basename(fn)
+    withoutExt: tuple = os.path.splitext(basename)
+    return withoutExt[0]
 
 def txt_cleanup(txt):
     chinese_text = []
