@@ -1,0 +1,3 @@
+easyocr
+jellyfish
+srt
